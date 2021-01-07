@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> -->
+        <!-- <script src="sketch.js"></script> -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <script src="script.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="header">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Instructions</a></li>
+            </ul>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div onclick="openModal('Robotics')" class="col shop">
+                    <h1>Robotics</h1>
+                </div>
+                <div onclick="openModal('Language Processing')" class="col shop">
+                    <h1>Language Processing</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div onclick="openModal('Space Technology')" class="col shop">
+                    <h1>Space Technology</h1>
+                </div>
+                <div class="col">
+                    <div class="title">
+                        <h1>AI Careers <br> Playground</h1>
+                    </div>
+                </div>
+                <div onclick="openModal('Behavior')" class="col shop">
+                    <h1>Behavior</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div onclick="openModal('Games')" class="col shop">
+                    <h1>Games</h1>
+                </div>
+                <div onclick="openModal('Autonomous Vehicles')" class="col shop">
+                    <h1>Autonomous Vehicles</h1>
+                </div>
+                <div onclick="openModal('Preferences')" class="col shop">
+                    <h1>Preferences</h1>
+                </div>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="closeModal()" class="close">&times;</span>
+                    <h1 id="shop-name"></h1>
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <iframe id="video-player" width="80%" height="275" src="https://www.youtube.com/embed/SugSWhtb3zY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- <img class="d-block w-100" src="..." alt="First slide"> -->
+                                  </div>
+                                  <div class="carousel-item">
+                                    <iframe id="video-player" width="80%" height="275" src="https://www.youtube.com/embed/SugSWhtb3zY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <iframe id="video-player" width="80%" height="275" src="https://www.youtube.com/embed/SugSWhtb3zY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                  <span style="filter: invert(1);" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span style="filter: invert(1);" class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="activity" class="col">
+                            <h5>Activity</h5>
+                        </div>
+                    </div>
+
+                    <div  class="row">
+                        <div id="description" class="col">
+                            <h5>Description</h5>
+                            <p id="desc-text">For students today, future opportunities in the tech world are more abundant than ever. More specifically, the field of artificial intelligence (AI) is growing at an incredibly rapid rate and the careers that correspond to it are multiplying as well. Introducing the "Careers in AI" video series, which highlights a diverse group of professionals working in artificial intelligence.</p>
+                        </div>
+                        <div id="additional-info" class="col">
+                            <h5>Learn More</h5>
+                            <ul id="add-links"></ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
